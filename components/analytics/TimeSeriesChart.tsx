@@ -31,9 +31,9 @@ const TimeSeriesChart = React.memo(({ dataset }: { dataset: AnalyticsDataset }) 
               labelStyle={{ color: '#ffffff' }}
             />
             <Legend />
-            <Line type="monotone" dataKey="contractInvocations" stroke="#8b5cf6" strokeWidth={2} dot={false} />
-            <Line type="monotone" dataKey="xlmRevenue" stroke="#06b6d4" strokeWidth={2} dot={false} />
-            <Line type="monotone" dataKey="successRate" stroke="#3b82f6" strokeWidth={2} dot={false} />
+            <Line type="monotone" dataKey="contractInvocations" stroke="#8b5cf6" strokeWidth={2} dot={false} isAnimationActive={false} />
+            <Line type="monotone" dataKey="xlmRevenue" stroke="#06b6d4" strokeWidth={2} dot={false} isAnimationActive={false} />
+            <Line type="monotone" dataKey="successRate" stroke="#3b82f6" strokeWidth={2} dot={false} isAnimationActive={false} />
           </LineChart>
         </ResponsiveContainer>
       </div>
