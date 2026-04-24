@@ -9,6 +9,8 @@ import WalletAddress from "./WalletAddress";
 import NetworkSwitcher from "./NetworkSwitcher";
 import ThemeToggle from "./ThemeToggle";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "next-i18next";
 export const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -53,6 +55,7 @@ export const Navigation: React.FC = () => {
           {/* Wallet Controls */}
           <div className="hidden md:flex gap-3 items-center">
             <ThemeToggle />
+            <LanguageSwitcher />
             <NetworkSwitcher />
             <ConnectWallet />
             <WalletAddress />
@@ -86,6 +89,10 @@ export const Navigation: React.FC = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-cosmic-purple/20 space-y-2">
+              <div className="flex gap-2">
+                <LanguageSwitcher />
+                <NetworkSwitcher className="flex-1" />
+              </div>
               <ConnectWallet className="w-full" />
               <WalletAddress />
             </div>

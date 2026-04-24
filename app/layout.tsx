@@ -4,6 +4,7 @@ import { StellarWalletProvider } from '@/components/context/StellarWalletProvide
 import { ThemeModeProvider } from '@/components/providers/ThemeModeProvider';
 import QueryProvider from '@/components/providers/QueryProvider';
 import Navigation from '@/components/Navigation';
+import PWAInstall from '@/components/PWAInstall';
 
 export const metadata: Metadata = {
   title: 'stellAIverse - AI Agent Marketplace',
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
     title: 'stellAIverse',
     description: 'Beautiful AI agent marketplace with cosmic UI',
     type: 'website',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#1a1a2e',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'stellAIverse',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/icon-152x152.png', sizes: '152x152', type: 'image/png' },
+    ],
   },
 };
 
